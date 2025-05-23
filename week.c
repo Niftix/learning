@@ -4,7 +4,7 @@
 
 int taille_bit(int n);
 int binaire(int *tab, int entier, int taille);
-void affichage(int *tableau);
+void affichage(int *tableau, int sisize);
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
 		return 1;
 	}
 	binaire(taille, 89, size);
-	affichage(taille);
+	affichage(taille, size);
 	return 0;
 }
 
@@ -49,14 +49,13 @@ int binaire(int *tab, int entier, int taille)
 		temp = temp >> 1;
 		i++;
 	}
-	tab[taille + 1] = '\0';
 return *tab;
 }
 
-void affichage(int *tableau)
+void affichage(int *tableau, int sisize)
 {
 	int i = 0;
-	while(tableau[i] != '\0')
+	while(i <= sisize)
 	{
 		printf("%d", tableau[i]);
 		i++;
