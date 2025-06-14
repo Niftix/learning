@@ -10,15 +10,12 @@ void ft_putnbr(int n)
         {
 		temp = '0';
         }
-	if (n % 10 != 0)
-	{
-		temp += (n % 10);
-	}
         if (n < 10 || n < 0)
         {
                 write (1, &temp, 1);
                 return;
         }
+	temp += (n % 10);
 	ft_putnbr(n/10);
         write (1, &temp, 1);
 
