@@ -12,9 +12,9 @@ void ft_print_reverse_alphabet(void)
 		start--;
 	}
 }
-
+/*
 int main (void)
 {
 	ft_print_reverse_alphabet();
 	return 0;
-}
+}*/
