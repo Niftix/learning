@@ -5,17 +5,24 @@ void ft_putnbr(int n)
 {
 	char	temp;
 
-	temp = '0';
-        if (n % 10 == 0)
+	if (n < 0)
+	{
+		write (1, "-", 1);
+		n = -n;
+	}
+	if (n % 10 == 0)
         {
 		temp = '0';
         }
-        if (n < 10 || n < 0)
+	if (n < 10)
         {
                 write (1, &temp, 1);
                 return;
         }
-	temp += (n % 10);
+	if (n % 10 > 0 )
+	{
+		temp = n % 10;
+	}
 	ft_putnbr(n/10);
         write (1, &temp, 1);
 
